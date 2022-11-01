@@ -7,6 +7,31 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Usage
+
+<h3>Database Setup</h3>
+
+This app uses MySQL. To use something different, open up config/Database.php and change the default driver.
+
+To use MySQL, make sure you install it, setup a database and then add your db credentials(database, username and password) to the .env.example file and rename it to .env
+
+<h3>Migrations</h3>
+
+To create all the nessesary tables and columns, run the following <br>
+<pre><code>php artisan migrate</code></pre> 
+
+<h3>Seeding The Database</h3>
+
+To add the dummy listings, run the following <br>
+<pre><code>php artisan db:seed</code></pre> 
+
+<h3>Application Start</h3>
+
+To add the dummy listings, run the following <br>
+<pre><code>php artisan serve</code></pre> 
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

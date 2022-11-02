@@ -14,6 +14,7 @@ class TaskController extends Controller
     public function createTask(Request $request){
         $task = new Task();
         $task->name = $request->name;
+        $task->title = $request->title;
         $task->save();
        return view('add-task');
     }
@@ -36,6 +37,7 @@ class TaskController extends Controller
     public function updateTask(Request $request){
         $task = Task::find($request->id);
         $task->name = $request->name;
+        $task->title = $request->title;
         $task->save();
         return view('add-task');
     }

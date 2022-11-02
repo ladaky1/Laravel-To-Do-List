@@ -19,7 +19,8 @@ class TaskTableSeeder extends Seeder
        $faker = Faker::create();
         foreach(range(1,30) as $index){
             DB::table('tasks')->insert([
-                'name' => $faker->sentence(5),
+                'name' => $faker->text(10),
+                'title' => $faker->sentence(5),
                 'created_at' => $faker->dateTime(),
                 'updated_at' => $faker->dateTime()
             ]);

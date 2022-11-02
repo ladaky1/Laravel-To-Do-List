@@ -30,9 +30,15 @@
                                     @csrf
                                     <input type="hidden" name="id" value="{{$task->id}}">
                                     <div class="form-group">
-                                        <label for="name"><h4>Edit Title</h4></label> 
-                                        <input type="text" name="name" class="form-control" placeholder="Edit Task Title" value="{{$task->name}}" > <br>
+                                        <label for="name"><h5>Edit Name</h5></label> 
+                                        <input type="text" name="name" class="form-control" placeholder="Edit Task Name" value="{{$task->name}}" > <br>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label for="title"><h5>Edit Title</h5></label>
+                                        <textarea name="title" class="form-control" rows="3">{{$task->title}}</textarea> <br>
+                                    </div>
+
                                     <button type="submit" class="btn btn-success"> Edit task</button>
                                 </form>
                             </div>

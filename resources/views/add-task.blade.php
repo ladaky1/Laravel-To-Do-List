@@ -29,9 +29,15 @@
                                 <form method="POST" action="{{route('task.create')}}">
                                     @csrf
                                     <div class="form-group">
-                                        <label for="name"><h4>Task Title</h4></label>
-                                        <input type="text" name="name" class="form-control" placeholder="Enter Task Title"> <br>
+                                        <label for="name"><h5>Task Name</h4></label>
+                                        <input type="text" name="name" class="form-control" placeholder="Enter Task Name"> <br>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label for="title"><h5>Task Title</h5></label>
+                                        <textarea name="title" class="form-control" rows="3" placeholder="Enter Task Title"></textarea> <br>
+                                    </div>
+
                                     <button type="submit" class="btn btn-success"> Add new Task</button>
                                     <a href="/tasks" class="btn btn-primary">View Todos</a>
                                 </form>

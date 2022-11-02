@@ -22,7 +22,8 @@ class TaskTableSeeder extends Seeder
                 'name' => $faker->text(10),
                 'title' => $faker->sentence(5),
                 'created_at' => $faker->dateTime(),
-                'updated_at' => $faker->dateTime()
+                'updated_at' => $faker->dateTime(),
+                'is_completed' => '0'
             ]);
         }
     }

@@ -15,6 +15,7 @@ class TaskController extends Controller
         $task = new Task();
         $task->name = $request->name;
         $task->title = $request->title;
+        $task->is_completed = 0;
         $task->save();
        return view('add-task');
     }
@@ -38,6 +39,7 @@ class TaskController extends Controller
         $task = Task::find($request->id);
         $task->name = $request->name;
         $task->title = $request->title;
+        $task->is_completed = $request->is_completed;
         $task->save();
         return view('add-task');
     }

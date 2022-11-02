@@ -7,11 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <style>
-        body{
-            background-color: silver;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <title>To-Do list</title>
 </head>
@@ -38,6 +34,14 @@
                                         <label for="title"><h5>Edit Title</h5></label>
                                         <textarea name="title" class="form-control" rows="3">{{$task->title}}</textarea> <br>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label for="status"><h5>Status</h5></label>
+                                        <select name="is_completed" class="form-control">
+                                            <option value="1">Completed</option>
+                                            <option value="0">Incompleted</option>
+                                        </select>
+                                    </div> <br>
 
                                     <button type="submit" class="btn btn-success"> Edit task</button>
                                 </form>

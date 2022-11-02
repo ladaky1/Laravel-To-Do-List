@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{-- Bootstrap --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <style>
-        body{
-            background-color: silver;
-        }
-    </style>
-    
+
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
     <title>To-Do list</title>
 </head>
 <body>
@@ -35,18 +33,28 @@
                                             <th>Task name</th>
                                             <th>Created at</th>
                                             <th>Updated at</th>
+                                            <th>Task</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
 
                                     <tbody>
                                         @foreach ($tasks as $task)
-                                            <tr>
+                                           <tr>
                                                 <td>{{$task->id}}</td>
                                                 <td>{{$task->name}}</td>
                                                 <td>{{$task->created_at}}</td>
                                                 <td>{{$task->updated_at}}</td>
                                                 <td>
+                                                    @if($task->is_completed == 1)
+                                                        <button class="btn btn-success">Completed </button>
+                                                    
+                                                    @else 
+                                                        <button class="btn btn-danger">Incompleted </button>
+                                                    
+                                                    @endif
+                                                </td>
+                                                <td> 
                                                     <a href="/edit-task/{{$task->id}}" class="btn btn-warning">Edit</a>
                                                     <a href="/delete-task/{{$task->id}}" class="btn btn-danger">Delete</a>
                                                 </td>

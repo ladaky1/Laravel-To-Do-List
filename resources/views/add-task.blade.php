@@ -26,12 +26,12 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="name"><h5>Task Name</h4></label>
-                                        <input type="text" name="name" class="form-control" placeholder="Enter Task Name"> <br>
+                                        <input type="text" name="name" class="form-control" placeholder="Enter Task Name" required> <br>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="title"><h5>Task Title</h5></label>
-                                        <textarea name="title" class="form-control" rows="3" placeholder="Enter Task Title"></textarea> <br>
+                                        <textarea name="title" class="form-control" rows="3" placeholder="Enter Task Title" required></textarea> <br>
                                     </div>
 
                                     <button type="submit" class="btn btn-success"> Add new Task</button>

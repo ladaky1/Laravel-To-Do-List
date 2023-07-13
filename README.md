@@ -27,7 +27,7 @@ To add the dummy listings, run the following <br>
 
 <h3>Application Start</h3>
 
-To add the dummy listings, run the following <br>
+To start the server, run the following command to CLI<br>
 <pre><code>php artisan serve</code></pre> 
 
 
